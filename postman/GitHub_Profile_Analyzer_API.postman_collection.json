@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "GitHub Profile Analyzer API",
+    "description": "Postman collection for the GitHub Profile Analyzer API assignment.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "username",
+      "value": "octocat"
+    }
+  ],
+  "item": [
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/"
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Analyze GitHub Profile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "{{base_url}}/api/analyze/{{username}}"
+      }
+    },
+    {
+      "name": "Get All Stored Profiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles?page=1&limit=10&sortBy=followers&order=DESC",
+          "host": ["{{base_url}}"],
+          "path": ["api", "profiles"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "10" },
+            { "key": "sortBy", "value": "followers" },
+            { "key": "order", "value": "DESC" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Single Stored Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/profiles/{{username}}"
+      }
+    },
+    {
+      "name": "Delete Stored Profile",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{base_url}}/api/profiles/{{username}}"
+      }
+    }
+  ]
+}
