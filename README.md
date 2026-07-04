@@ -360,3 +360,9 @@ curl http://localhost:5000/api/profiles/torvalds
 
 - The GitHub repositories endpoint is paginated. This project analyzes up to 300 recently updated public repositories per user to keep response time reasonable.
 - Re-analyzing the same username updates the existing database row instead of creating duplicates.
+
+## Submission Links
+
+GitHub repository link: https://github.com/KHALIQ-Abdul/github-profile-analyzer-api
+
+Live deployed API URL: https://github-profile-analyzer-api-production-ceb8.up.railway.app
