@@ -327,8 +327,8 @@ For MySQL hosting, you can use:
 After deployment, update the README with:
 
 ```txt
-Live deployed API URL: https://your-api-url.com
-GitHub repository link: https://github.com/your-username/github-profile-analyzer-api
+Live deployed API URL: Will be updated after deployment
+GitHub repository link: https://github.com/KHALIQ-Abdul/github-profile-analyzer-api
 ```
 
 ---
